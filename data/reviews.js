@@ -1,0 +1,6 @@
+export const review = [
+    {percentage: 30, headline: 'Effortlessly manage multiple- projects, save 30% time.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id nunc odio. Aliquam et tellus urna. Phasellus egetadipiscing elit. Mauris id nunc odio. Aliquam et tellus urna. Phasellus eget'}, 
+    {percentage: 80, headline: 'Boost productivity- by 80% with task prioritization.', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id nunc odio. Aliquam et tellus urna. Phasellus egetadipiscing elit. Mauris id nunc odio. Aliquam et tellus urna. Phasellus eget'}, 
+    {percentage: 50, headline: 'Track progress -with ease, improve by50', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id nunc odio. Aliquam et tellus urna. Phasellus egetadipiscing elit. Mauris id nunc odio. Aliquam et tellus urna. Phasellus eget'}, 
+    {percentage: 89, headline: 'Increase in your revenue- by end of this month is comming', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id nunc odio. Aliquam et tellus urna. Phasellus egetadipiscing elit. Mauris id nunc odio. Aliquam et tellus urna. Phasellus eget'}
+]

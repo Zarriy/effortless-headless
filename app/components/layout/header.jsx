@@ -10,7 +10,7 @@ export default function Header({menu}){
             <div>
                 <img src={logo} alt="logo" className='h-7'/>
             </div>
-           <ul className="flex gap-4">
+           <ul className="flex gap-8">
                 {menu.map(item => <li key={item.id}>{item.title}</li>)}
            </ul>
             <div className='flex gap-4 items-center'>

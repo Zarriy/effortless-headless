@@ -27,3 +27,21 @@ p {
   font-size: 1rem;
   line-height: 1.4;
 }
+
+
+._framer-body{
+  z-index: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  padding: 25px;
+}
+._internal-framer{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}

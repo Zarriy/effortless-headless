@@ -5,4 +5,10 @@
 
 @layer components {
   /* New component styles can go here */
+  .majorGrid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+  }
 }

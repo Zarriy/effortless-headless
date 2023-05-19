@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        back: "#03040d"
+        back: "#03040d", 
+        para: "#7d7d7d"
       },
       fontFamily: {
         'headfont': ['Outfit', 'sans-serif'],
