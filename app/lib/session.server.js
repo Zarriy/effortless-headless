@@ -57,7 +57,7 @@ function byteStringToUint8Array(byteString) {
  * swap out the cookie-based implementation with something else!
  */
 export class HydrogenSession {
-  constructor(sessionStorage, session) {}
+  constructor() {}
 
   static async init(request, secrets) {
     const createCookie = createCookieFactory({sign, unsign});
