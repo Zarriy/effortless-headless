@@ -28,12 +28,7 @@ export const links = () => {
 };
 
 export async function loader({context}) {
-  const layout = await context.storefront.query(LAYOUT_QUERY, {
-    variables: {
-      handle: "header"
-    }
-  });
-  console.log(layout)
+  const layout = await context.storefront.query(LAYOUT_QUERY);
   return {layout};
 }
 
@@ -52,7 +47,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Layout header={headerMenu}> 
+        <Layout > 
         <Outlet />
         </Layout>
         <ScrollRestoration />
@@ -63,17 +58,11 @@ export default function App() {
 }
 
 const LAYOUT_QUERY = `#graphql
-  query layout($handle: String!) {
+  query layout {
     shop {
       name
       description
     }
-    headerMenu : menu(handle: $handle){
-      title
-      items{
-        title
-        url
-      }
-    }
+  
   }
 `;
