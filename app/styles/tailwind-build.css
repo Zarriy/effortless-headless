@@ -477,3 +477,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 /* New component styles can go here */
+.static {
+  position: static;
+}
