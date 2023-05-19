@@ -28,14 +28,16 @@ export const links = () => {
 };
 
 export async function loader({context}) {
-  const layout = await context.storefront.query(LAYOUT_QUERY);
+  const layout = await context.storefront.query(LAYOUT_QUERY, {
+    variables: {
+      handle: "header"
+    }
+  });
   return {layout};
 }
 
 export default function App() {
   const data = useLoaderData();
-
-  const {name} = data.layout.shop;
   const {headerMenu} = data.layout;
 
   return (
@@ -58,10 +60,17 @@ export default function App() {
 }
 
 const LAYOUT_QUERY = `#graphql
-  query layout {
+  query layout($handle: String!) {
     shop {
       name
       description
+    }
+    headerMenu: menu(handle: $handle){
+      title
+      items{
+        title
+        url
+      }
     }
   
   }
