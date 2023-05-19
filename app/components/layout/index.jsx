@@ -1,10 +1,10 @@
 import Header from "./header";
 
 
-export default function Layout({children, header}){
+export default function Layout({children}){
 return(
     <>
-        <Header menu={header.items}/>
+        <Header />
         {children}
     </>
 )
