@@ -33,7 +33,6 @@ export async function loader({context}) {
       handle: "header"
     }
   });
-  console.log(layout)
   return {layout};
 }
 

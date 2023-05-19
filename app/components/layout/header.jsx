@@ -5,7 +5,7 @@ export default function Header({menu}){
 
     return(
         <div className='bg-[#1b1b1b] fixed z-10  w-full'>
-        <div className="text-white border-b  border-gray-400  p-4 text-md bg-black" id="header_fixed">
+        <div className="text-white border-b  border-gray-400  p-4 text-md" style={{backgroundColor: "black"}} id="header_fixed">
             <div className='max-w-[1200px] mx-auto flex flex-row justify-between items-center'> 
             <div>
                 <img src={logo} alt="logo" className='h-7'/>
