@@ -2,6 +2,7 @@ import logo from '../../../public/logo.svg';
 import {RiShoppingBag3Line} from 'react-icons/ri'
 
 export default function Header({menu}){
+    console.log(menu);
 
     return(
         <div className='bg-[#1b1b1b] fixed z-10  w-full'>
@@ -11,7 +12,7 @@ export default function Header({menu}){
                 <img src={logo} alt="logo" className='h-7'/>
             </div>
            <ul className="flex gap-4">
-                {menu.map(item => <li key={item.id}>{item.title}</li>)}
+                
            </ul>
             <div className='flex gap-4 items-center'>
                 <RiShoppingBag3Line className="text-[28px]" />
