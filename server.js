@@ -7,7 +7,7 @@ import {HydrogenSession} from '~/lib/session.server';
 /**
  * Export a fetch handler in module format.
  */
-export default async function (request){
+export default async function (request) {
   const env = process.env;
   try {
     /**
@@ -38,7 +38,7 @@ export default async function (request){
       // requestGroupId: request.headers.get('request-id'),
     });
 
-    const handleRequest = createRequestHandler(remixBuild as any, 'production');
+    const handleRequest = createRequestHandler(remixBuild, 'production');
 
     const response = await handleRequest(request, {
       session,
