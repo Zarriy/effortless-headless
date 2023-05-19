@@ -652,7 +652,6 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@300;400;500&family=Outfit:wght@400;500;600;700&display=swap');
-
 .hover\:bg-white\/60:hover {
   background-color: rgb(255 255 255 / 0.6);
 }

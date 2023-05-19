@@ -49,7 +49,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Layout > 
+        <Layout menu={headerMenu.items} > 
         <Outlet />
         </Layout>
         <ScrollRestoration />
@@ -68,6 +68,7 @@ const LAYOUT_QUERY = `#graphql
     headerMenu: menu(handle: $handle){
       title
       items{
+        id
         title
         url
       }
