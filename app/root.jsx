@@ -9,6 +9,7 @@ import {
 import tailwind from './styles/tailwind-build.css';
 import styles from './styles/app.css';
 import favicon from '../public/favicon.svg';
+import Layout from './components/layout';
 
 export const links = () => {
   return [
@@ -27,7 +28,12 @@ export const links = () => {
 };
 
 export async function loader({context}) {
-  const layout = await context.storefront.query(LAYOUT_QUERY);
+  const layout = await context.storefront.query(LAYOUT_QUERY, {
+    variables: {
+      handle: "header"
+    }
+  });
+  console.log(layout)
   return {layout};
 }
 
@@ -35,6 +41,7 @@ export default function App() {
   const data = useLoaderData();
 
   const {name} = data.layout.shop;
+  const {headerMenu} = data.layout;
 
   return (
     <html lang="en">
@@ -45,9 +52,9 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <h1>Hello, {name}</h1>
-        <p>This is a custom storefront powered by Hydrogen</p>
+        <Layout header={headerMenu}> 
         <Outlet />
+        </Layout>
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -56,10 +63,17 @@ export default function App() {
 }
 
 const LAYOUT_QUERY = `#graphql
-  query layout {
+  query layout($handle: String!) {
     shop {
       name
       description
+    }
+    headerMenu : menu(handle: $handle){
+      title
+      items{
+        title
+        url
+      }
     }
   }
 `;

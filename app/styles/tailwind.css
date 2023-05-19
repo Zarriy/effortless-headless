@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@300;400;500&family=Outfit:wght@400;500;600;700&display=swap');
+
 @layer components {
   /* New component styles can go here */
 }
