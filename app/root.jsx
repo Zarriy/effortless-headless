@@ -39,7 +39,7 @@ export async function loader({context}) {
 export default function App() {
   const data = useLoaderData();
   const {headerMenu} = data.layout;
-  
+  console.log(headerMenu)
 
   return (
     <html lang="en">
