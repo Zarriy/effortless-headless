@@ -39,6 +39,7 @@ export async function loader({context}) {
 export default function App() {
   const data = useLoaderData();
   const {headerMenu} = data.layout;
+  
 
   return (
     <html lang="en">
@@ -49,7 +50,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Layout menu={headerMenu.items} > 
+        <Layout  > 
         <Outlet />
         </Layout>
         <ScrollRestoration />

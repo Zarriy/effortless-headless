@@ -1,8 +1,7 @@
 import logo from '../../../public/logo.svg';
 import {RiShoppingBag3Line} from 'react-icons/ri'
 
-export default function Header({menu}){
-    console.log(menu);
+export default function Header(){
 
     return(
         <div className='bg-[#1b1b1b] fixed z-10  w-full'>
