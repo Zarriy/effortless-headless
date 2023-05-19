@@ -73,6 +73,10 @@ export default async function (request) {
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error(error);
-    return new Response('An unexpected error occurred', {status: 500}, error);
+    return new Response(
+      'An unexpected now error occurred',
+      {status: 500},
+      error,
+    );
   }
 }
