@@ -38,9 +38,8 @@ export async function loader({context}) {
 
 export default function App() {
   const data = useLoaderData();
-  const {headerMenu} = data.layout;
-  console.log(headerMenu)
-
+  console.log(data);
+  
   return (
     <html lang="en">
       <head>
@@ -66,7 +65,7 @@ const LAYOUT_QUERY = `#graphql
       name
       description
     }
-    headerMenu: menu(handle: $handle){
+    menu(handle: $handle){
       title
       items{
         id
